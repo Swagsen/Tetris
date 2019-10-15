@@ -14,10 +14,12 @@ namespace Tetris
     {
         int[,] landed;
         Texture2D image;
+        SpriteFont font;
         const int height = 20;
         const int width = 10;
         Figura figura;
-        public static ContentManager content;
+
+        Texture2D backgroundPicture;
 
         KeyboardState previousState;
 
@@ -27,11 +29,13 @@ namespace Tetris
 
         int Points = 0;
 
-        public GameManager()
+        public GameManager(ContentManager Content)
         {
-            image = content.Load<Texture2D>("klocek");
+            image = Content.Load<Texture2D>("klocek");
+            font = Content.Load<SpriteFont>("MenuFont");
             landed = new int[height, width];
             figura = new Figura();
+            backgroundPicture = Content.Load<Texture2D>("BackgroundMenu1");
         }
 
         public enum CANTMOVE { LEFT, RIGHT, DOWN, GITGUT, AtAll };
@@ -75,7 +79,6 @@ namespace Tetris
                     }
                     y++;
 
-                    Console.Write("+miljon punktow\n");
                     Points += 100;
                 }
             }
@@ -118,7 +121,7 @@ namespace Tetris
             return CanYouMove;
         }
 
-        public bool Update(GameTime gameTime)
+        public void Update(GameTime gameTime)
         {
             ElapsedTime += gameTime.ElapsedGameTime.Milliseconds;
             KeyBoardElapsedTime += gameTime.ElapsedGameTime.Milliseconds;
@@ -132,8 +135,8 @@ namespace Tetris
                     figura.MoveDown();
                 }
 
-                Console.Clear();
-                Console.Write("Czas: " + (int)gameTime.TotalGameTime.TotalSeconds + " Punkty: " + Points + "\n");
+                //Console.Clear();
+                //Console.Write("Czas: " + (int)gameTime.TotalGameTime.TotalSeconds + " Punkty: " + Points + "\n");
                 ElapsedTime = 0;
             }
 
@@ -154,8 +157,10 @@ namespace Tetris
 
             if(OrCanYouQuestionMark == CANTMOVE.AtAll)
             {
-                Console.Write("kuniec\n");
-                return false;
+                //Console.Write("kuniec\n");
+                Game1.State = Game1.state.GAMEOVER;
+                Game1.CurrentScore = Points;
+                return;
             }
 
             if (state.IsKeyDown(Keys.Right) && !previousState.IsKeyDown(Keys.Right) && OrCanYouQuestionMark != CANTMOVE.RIGHT)
@@ -178,12 +183,13 @@ namespace Tetris
             RemoveCompleteLines();
 
             previousState = state;
-
-            return true;
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Draw(backgroundPicture, new Vector2(0, 0), Color.White);
+            spriteBatch.DrawString(font, "SCORE: " + Points.ToString(), new Vector2(0, 0), Color.White);
+
 
             for (int x = 0; x < width; x++)
             {

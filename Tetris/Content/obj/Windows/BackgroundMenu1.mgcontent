@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Mihau/Desktop/Tetris/Tetris/Content/klocek.png</SourceFile>
-  <SourceTime>2019-10-14T20:46:12.7752762+02:00</SourceTime>
-  <DestFile>C:/Users/Mihau/Desktop/Tetris/Tetris/Content/bin/Windows/klocek.xnb</DestFile>
-  <DestTime>2019-10-14T21:32:10.0391956+02:00</DestTime>
+  <SourceFile>C:/Users/Mihau/Desktop/Tetris/Tetris/Content/BackgroundMenu1.png</SourceFile>
+  <SourceTime>2019-07-21T12:01:19.3825918+02:00</SourceTime>
+  <DestFile>C:/Users/Mihau/Desktop/Tetris/Tetris/Content/bin/Windows/BackgroundMenu1.xnb</DestFile>
+  <DestTime>2019-10-14T21:32:10.0211964+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

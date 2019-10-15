@@ -4,9 +4,15 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Mihau/Desktop/Tetris/Tetris/Content/Arrow4.png</File>
+    <File>C:/Users/Mihau/Desktop/Tetris/Tetris/Content/BackgroundMenu1.png</File>
     <File>C:/Users/Mihau/Desktop/Tetris/Tetris/Content/klocek.png</File>
+    <File>C:/Users/Mihau/Desktop/Tetris/Tetris/Content/MenuFont.spritefont</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

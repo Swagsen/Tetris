@@ -46,3 +46,6 @@ C:\Users\Mihau\Desktop\Jakies Projekty\Tetris\Tetris\obj\x86\Debug\Tetris.csproj
 C:\Users\Mihau\Desktop\Jakies Projekty\Tetris\Tetris\obj\x86\Debug\Tetris.csproj.CopyComplete
 C:\Users\Mihau\Desktop\Jakies Projekty\Tetris\Tetris\obj\x86\Debug\Tetris.exe
 C:\Users\Mihau\Desktop\Jakies Projekty\Tetris\Tetris\obj\x86\Debug\Tetris.pdb
+C:\Users\Mihau\Desktop\Tetris\Tetris\bin\Windows\x86\Debug\Content\Arrow4.xnb
+C:\Users\Mihau\Desktop\Tetris\Tetris\bin\Windows\x86\Debug\Content\BackgroundMenu1.xnb
+C:\Users\Mihau\Desktop\Tetris\Tetris\bin\Windows\x86\Debug\Content\MenuFont.xnb
